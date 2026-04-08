@@ -118,7 +118,9 @@
               </div>
               {/* CTAs */}
             <div className="flex flex-col gap-3">
-       <button onClick={() => setActiveBtn("cart")}
+       <button onClick={() => {
+        setActiveBtn("cart");
+        navigate("/cart");}}
         className={`w-full py-3 font-semibold text-sm rounded-md transition
       ${activeBtn === "cart"
         ? "bg-[#C2863F] text-white shadow"
