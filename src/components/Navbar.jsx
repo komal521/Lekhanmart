@@ -38,7 +38,7 @@ const Navbar = () => {
             className="w-7 h-7 rounded-full object-cover cursor-pointer" />
           <img src={menuIcon}
             onClick={() => setOpen(!open)}
-            className="w-6 h-6 cursor-pointer md:hidden" />
+            className="w-6 h-6 cursor-pointer md:hidden mr-3" />
         </div>
       </div>
       <div className="mt-2 md:hidden">
