@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import logo from "../assets/logo_golden_creation.avif";
 import searchIcon from "../assets/search.png";
 import heartIcon from "../assets/heart.png";
@@ -14,11 +15,12 @@ const Navbar = () => {
     } else {
       alert(`Searching for: ${search}`);
     }};
+    const navigate = useNavigate();
   return (
     <nav className="bg-white shadow-sm px-3 md:px-8 py-2 sticky top-0 z-50">  
       <div className="flex items-center justify-between gap-3">
         <img src={logo} alt="logo"
-          onClick={() => alert("Home")}
+            onClick={() => navigate("/")}
           className="h-9 md:h-12 object-contain cursor-pointer" />
         <div className="hidden md:flex items-center bg-gray-100 px-3 py-2 rounded-lg gap-2 w-1/3">
           <img src={searchIcon} className="w-4 opacity-60 cursor-pointer" onClick={handleSearch} />
@@ -34,7 +36,7 @@ const Navbar = () => {
             onClick={() => alert("Cart")}
             className="w-5 h-5 cursor-pointer" />
           <img src={profileImg}
-            onClick={() => alert("Profile")}
+            onClick={() => navigate("/profile")}
             className="w-7 h-7 rounded-full object-cover cursor-pointer" />
           <img src={menuIcon}
             onClick={() => setOpen(!open)}

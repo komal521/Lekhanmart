@@ -3,6 +3,7 @@ import instagram from "../assets/instagram.png";
 import gmail from "../assets/gmail (1).png";
 import twitter from "../assets/twitter.png";
 import logo from "../assets/logo_golden_creation.avif";
+import { Link } from "react-router-dom";
 const Footer =()=>{
   return(
     <footer className="w-full bg-white border-t mt-10">
@@ -35,7 +36,8 @@ const Footer =()=>{
             <h2 className="font-semibold mb-3 text-gray-800">Company</h2>
             <ul className="text-sm text-gray-500 space-y-2">
               <li className="hover:text-black cursor-pointer">About Us</li>
-              <li className="hover:text-black cursor-pointer">Our Blog</li>
+              <li>
+                <Link Link to="/blog" className="hover:text-black cursor-pointer">Our Blog</Link></li>
               <li className="hover:text-black cursor-pointer">Contact Us</li>
               <li className="hover:text-black cursor-pointer">FAQS</li>
             </ul>
