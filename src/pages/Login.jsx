@@ -57,14 +57,11 @@ const Login = () => {
         </div>
         <div className="mt-3">
           <div className="flex justify-between text-xs text-gray-500">
-         <label>Password</label>
-         <span onClick={handleForgot}
-          className="cursor-pointer hover:underline text-blue-500" >
-                  Forgot password?
-            </span> </div>
+         <label>OTP</label>
+           </div>
           <div className="flex items-center border mt-1 px-3 py-2 rounded-md gap-2">
             <img src={lock} className="w-5" />
-            <input type="password"placeholder="********"
+            <input type="write otp"placeholder="********"
               className="outline-none text-sm w-full"/>
           </div>  </div>
         <div className="flex items-center gap-1 text-xs mt-2">
@@ -89,11 +86,7 @@ const Login = () => {
                  Apple
           </button>
         </div>
-        <p className="text-center text-xs text-gray-500 mt-4">
-          New to LekhanMart?{" "}
-          <span onClick={handleCreate}
-            className="text-blue-500 cursor-pointer hover:underline"> Create an account
-          </span> </p>
+    
       </div>
       <div className="text-center text-xs text-gray-500 mt-6 px-4 space-y-2">
         <p>Secure Checkout • SSL 256-bit • No Hidden Fees</p>

@@ -36,7 +36,7 @@
     
     return (
       <div className="bg-white min-h-screen w-full font-sans tracking-tight">
-        <Navbar />
+       <Navbar /> 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 py-4">
   <div className="px-6 pt-4 flex items-center gap-2 text-sm text-gray-500">
     <span onClick={() => navigate("/")}

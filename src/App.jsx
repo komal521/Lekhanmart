@@ -5,6 +5,8 @@ import WritingEssentials from "./pages/WritingEssentials";
 import ProductDetail from "./pages/ProductDetail";
 import Cart from "./pages/Cart";
 import Checkout from "./pages/Checkout";
+import  Profile from "./pages/Profile";
+import Blog from "./pages/Blog";
 function App() {
   return (
     <BrowserRouter>
@@ -15,6 +17,8 @@ function App() {
         <Route path="/product/:id" element={<ProductDetail />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/checkout" element ={<Checkout />} />
+        <Route path="/profile" element ={<Profile/>} />
+        <Route path="/blog" element={<Blog />} />
       </Routes>
     </BrowserRouter>
   );

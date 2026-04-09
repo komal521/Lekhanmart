@@ -18,11 +18,6 @@ import p1 from "../assets/p1.webp";
 import p2 from "../assets/p2.jpg";
 import p3 from "../assets/p3.avif";
 import p4 from "../assets/p4.webp";
-import p5 from "../assets/p5.webp";
-import p6 from "../assets/p6.webp";
-import p7 from "../assets/p7.avif";
-import p8 from "../assets/p8.webp";
-import p9 from "../assets/p9.jpg";
 import curatedImg from "../assets/curated.webp";
 import graduate from "../assets/graduate.png";
 import briefcase from "../assets/briefcase.png";
@@ -38,13 +33,6 @@ import ananya from "../assets/ananaya.jpg";
 import vikram from "../assets/vikram.jpg";
 const Home = () => {
   const [activeBtn, setActiveBtn] = useState("shop");
-  const productNames = [
-    "Pilot Metropolitan Fountain Pen",
-    "Leuchtturm1917 A5 Notebook",
-    "Staedtler Pigment Liner Set",
-    "Pentel GraphGear 1000",
-    "Zebra Sarasa Clip 10 Pack", ];
-  const productPrices = ["₹1,850", "₹1,499", "₹850", "₹950", "₹750"];
   return (
    <div className="w-full overflow-x-hidden">
   <Navbar />
@@ -117,14 +105,11 @@ const Home = () => {
               <img src={chevron} className="w-4" /> </button>
           </div> </div>
       <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
-          {[p5, p6, p7, p8, p9].map((img, i) => (
+        {[1, 2, 3, 4, 5].map((_, i) => (
        <div key={i} onClick={() => alert(`Product ${i} clicked`)}
        className="bg-white p-3 rounded-lg shadow-sm hover:shadow-md hover:scale-105 transition cursor-pointer">
-         <img src={img} className="w-full h-36 object-contain rounded-md"/>
-              <img src={stars} className="w-5 mt-2" />
-     <p className="mt-2 text-sm font-medium text-gray-800">
-       {productNames[i]} </p>
-      <p className="text-yellow-700 font-semibold mt-1">  {productPrices[i]} </p> </div> ))}
+
+<p className="text-gray-400 text-sm">Product {i + 1}</p> </div> ))}
         </div>
       </div>
       <div className="px-4 md:px-10 mt-10 p-6 md:p-8 rounded-2xl flex flex-col md:flex-row items-center gap-8 shadow-md"
