@@ -20,7 +20,7 @@ const Navbar = () => {
     <nav className="bg-white shadow-sm px-3 md:px-8 py-2 sticky top-0 z-50">  
       <div className="flex items-center justify-between gap-3">
         <img src={logo} alt="logo"
-            onClick={() => navigate("/")}
+            onClick={() => navigate("/home")}
           className="h-9 md:h-12 object-contain cursor-pointer" />
         <div className="hidden md:flex items-center bg-gray-100 px-3 py-2 rounded-lg gap-2 w-1/3">
           <img src={searchIcon} className="w-4 opacity-60 cursor-pointer" onClick={handleSearch} />
