@@ -14,10 +14,20 @@ import car from "../assets/car.png";
 import verify from "../assets/verify.png";
 import bag from "../assets/shopping-bag.png";
 import stars from "../assets/stars.png";
-import p1 from "../assets/p1.webp";
-import p2 from "../assets/p2.jpg";
-import p3 from "../assets/p3.avif";
-import p4 from "../assets/p4.webp";
+import t1 from "../assets/t1.jpeg";
+import t2 from "../assets/t2.jpeg";
+import t3 from "../assets/t3.jpeg";
+import t4 from "../assets/t4.jpeg";
+import t5 from "../assets/t5.jpeg";
+import t6 from "../assets/t6.jpeg";
+import t7 from "../assets/t7.jpeg";
+import t8 from "../assets/t8.jpeg";
+import t9 from "../assets/t9.jpeg";
+import t10 from "../assets/t10.jpeg";
+import t11 from "../assets/t11.jpeg";
+import t12 from "../assets/t12.jpeg";
+import t13 from "../assets/t13.jpeg";
+import t14 from "../assets/t14.jpeg";
 import curatedImg from "../assets/curated.webp";
 import graduate from "../assets/graduate.png";
 import briefcase from "../assets/briefcase.png";
@@ -86,11 +96,23 @@ const Home = () => {
       <p className="text-gray-500 text-sm mt-1 mb-6">
           Curated collections for every Creative need.</p>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-          <CategoryCard img={p1} title="School Essentials" />
-          <CategoryCard img={p2} title="Office Supplies" />
-          <CategoryCard img={p3} title="Art & Craft" />
-          <CategoryCard img={p4} title="Writing Essentials" />
-        </div></div>
+
+  <CategoryCard img={t1} title="OFFICE STATIONERY" />
+  <CategoryCard img={t2} title="ART & CRAFT" />
+  <CategoryCard img={t3} title="SCHOOL STATIONERY" />
+  <CategoryCard img={t4} title="CORPORATE GIFTING" />
+  <CategoryCard img={t5} title="PREMIUM PENS" />
+  <CategoryCard img={t6} title="COMPUTER & ELECTRONICS ACCESSORIES" />
+  <CategoryCard img={t7} title="FILES & FOLDERS" />
+  <CategoryCard img={t8} title="NOTEBOOKS & DIARIES" />
+  <CategoryCard img={t9} title="PENS & PENCILS" />
+  <CategoryCard img={t10} title="NOTEPAD & STICKY NOTES" />
+  <CategoryCard img={t11} title="MARKERS & HIGHLIGHTERS" />
+  <CategoryCard img={t12} title="TAPE & SCISSORS" />
+  <CategoryCard img={t13} title="Ink & Refills"/>
+  <CategoryCard img={t14} title= "Clay & Dough"/>
+
+</div></div>
       <div className="px-4 md:px-10 py-12" style={{
           background: "linear-gradient(180deg, #FFFFFF 0%, #FFF49C 100%)", }} >
       <div className="flex justify-between items-center mb-6">
@@ -233,24 +255,18 @@ function ReviewCard({ img, name, text }) {
       <p className="text-sm font-semibold text-gray-700">
         {title} </p></div> );}
     function CategoryCard({ img, title }) {
-  const navigate = useNavigate();
-  const handleClick = () => {
-    if (title === "Writing Essentials") {
-      navigate("/writing-essentials");
-    } else {
-      alert(`${title} clicked`);  }};
   return (
-    <div className="bg-white p-3 rounded shadow-sm hover:shadow-md transition">
-      <img src={img} className="w-full h-32 object-contain rounded" />
-      <p className="mt-2 text-sm font-medium">{title}</p>
-      <p className="text-xs text-gray-500">120+ Products</p>
-      <button onClick={handleClick}
-        className="flex items-center gap-1 text-sm mt-1 ml-auto hover:scale-105 transition"
-        style={{ color: "#C2863F", background: "transparent" }}>
-        Explore
-        <img src={chevron} className="w-3" />
-      </button>
-    </div> );}   
+    <div className="bg-white p-4 rounded-xl shadow-sm hover:shadow-md hover:scale-105 transition text-center cursor-pointer">
+      <div className="flex justify-center items-center">
+        <img src={img}
+          className="w-36 h-36 object-cover rounded-full" />
+      </div>
+      <p className="mt-3 text-sm font-medium text-gray-700">
+        {title}
+      </p>
+    </div>
+  );
+}
 function TailCard({ img, title, desc }) {
   return (
     <div className="p-6 rounded-lg text-center shadow-md relative z-10"
