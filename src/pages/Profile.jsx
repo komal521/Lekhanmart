@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
 import profileImg from "../assets/A1.jpg";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
@@ -16,9 +15,10 @@ import rightArrow from "../assets/right-arrow.png";
 import boxIcon from "../assets/box.png";
 import verifyIcon from "../assets/verify.png";
 import notificationIcon from "../assets/notification.png";
+import Orders from "../pages/Orders";
+import Address from "../pages/Address";
 const Profile = () => {
   const [active, setActive] = useState("dashboard");
-  const navigate = useNavigate();
   const [activeCard, setActiveCard] = useState("orders");
   const handleClick = (msg) => {
     alert(msg);};
@@ -35,7 +35,6 @@ const Profile = () => {
       <div className="md:w-64 w-full bg-white px-0 md:p-5 shadow-sm flex md:flex-col justify-between md:h-screen overflow-x-auto md:overflow-visible flex-shrink-0">
   {/* TOP MENU */}
   <div className="flex md:flex-col gap-2 w-full">
-
     <h2 className="text-lg font-semibold mb-6 hidden md:block">
       Dashboard
     </h2>
@@ -49,11 +48,7 @@ const Profile = () => {
         ["account", "Account Details", accountIcon],
       ].map(([key, label, icon]) => (
         <div  key={key}
-          onClick={() => {
-          setActive(key);
-          if (key === "orders") {
-          navigate("/orders");
-          }}}
+          onClick={() => setActive(key)}
           className={`${menuClass(key)} min-w-[100px] md:min-w-full flex items-center justify-between`} >
           <div className="flex items-center gap-2 md:gap-3">
             <img src={icon} className="w-4 h-4 md:w-5 md:h-5" />
@@ -76,7 +71,7 @@ const Profile = () => {
        </div>
          </div>       
           {/* MAIN */}
-          <div className="flex-1 w-full px-1 md:px-6 py-3 md:py-6">
+          <div className="flex-1 w-full px-2 md:px-6 py-3 md:py-6 overflow-x-hidden">
             <div className="w-full bg-white px-3 py-4 md:p-5 rounded-2xl shadow-sm flex flex-col md:flex-row justify-between items-start md:items-center gap-3 md:gap-4">
            <div className="flex items-center gap-3">
             <img src={profileImg} className="w-10 h-10 md:w-12 md:h-12 rounded-full" />
@@ -97,7 +92,6 @@ const Profile = () => {
             {/* DASHBOARD */}
             {active === "dashboard" && (
             <>
-           {/* STATS */}
            <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-4 mt-6 w-full">
             {[
             ["orders", "TOTAL ORDERS", "12", "3 orders in transit", boxIcon],
@@ -154,20 +148,20 @@ const Profile = () => {
           ["#LM-96112", "Sep 28, 2023", "₹2,100.00", "Delivered"],
           ["#LM-95001", "Sep 15, 2023", "₹890.00", "Cancelled"],
           ["#LM-94220", "Sep 02, 2023", "₹1,560.00", "Delivered"],
-             ].map((row, i) => (
+          ].map((row, i) => (
           <tr key={i} className="border-t hover:bg-gray-50">
           <td className="p-2 md:p-3">{row[0]}</td>
           <td className="p-2 md:p-3 text-center">{row[1]}</td>
           <td className="p-2 md:p-3 text-center">{row[2]}</td>
           <td className="p-2 md:p-3 text-center font-medium">{row[3]}</td>
           <td className="p-2 md:p-3 text-[#C2863F] flex items-center justify-center gap-1 cursor-pointer">
-                                Details
+               Details
             <img src={rightArrow} className="w-3" />
              </td>
                 </tr> ))}
                </tbody>
                </table>
-                    </div>
+                </div>
                   </div>
                   {/* RIGHT SIDE */}
               <div className="space-y-4 w-full">
@@ -179,14 +173,13 @@ const Profile = () => {
              <div className="flex justify-between items-center">
              <div className="flex items-center gap-2 text-xs md:text-sm">
               <img src={verifyIcon} className="w-4" />
-                              Update Password
-               </div>
+                              Update Password</div>
               <img src={chevron} className="w-3" /> </div>
              <p className="text-[10px] md:text-xs mt-1 opacity-80">
-                            Last changed 4 month ago
+                Last changed 4 month ago
               </p> </div>
-        <div onClick={() => handleClick("Notifications")}
-          className="bg-[#C2863F] text-white px-3 py-2 rounded-xl cursor-pointer" >
+            <div onClick={() => handleClick("Notifications")}
+             className="bg-[#C2863F] text-white px-3 py-2 rounded-xl cursor-pointer" >
             <div className="flex justify-between items-center">
              <div className="flex items-center gap-2 text-xs md:text-sm">
               <img src={notificationIcon} className="w-4" />
@@ -194,8 +187,8 @@ const Profile = () => {
               </div>
             <img src={chevron} className="w-3" /></div>
          <p className="text-[10px] md:text-xs mt-1 opacity-80">
-                            Manage your alerts & updates</p>
-                        </div>
+                Manage your alerts & updates</p>
+                    </div>
                       </div>
                     </div>
         <div className="bg-gradient-to-b from-white to-yellow-100 p-4 rounded-2xl shadow-sm">
@@ -210,11 +203,33 @@ const Profile = () => {
                 </div>
               </>
             )}
-            {active !== "dashboard" && (
-              <div className="bg-white p-4 mt-6 rounded-2xl shadow-sm">
-                <h2 className="capitalize">{active}</h2>
-              </div>
-            )}
+          {/* ORDERS */}
+       {active === "orders" && (
+    <div className="mt-6">
+    <Orders />
+   </div>
+     )}
+    {/* ADDRESS */}
+      {active === "address" && (
+       <div className="mt-6">
+       <Address />
+       </div>
+          )}
+       {active === "wishlist" && (
+        <div className="bg-white p-4 mt-6 rounded-2xl shadow-sm">
+       Wishlist UI
+         </div>
+         )}
+{active === "track" && (
+  <div className="bg-white p-4 mt-6 rounded-2xl shadow-sm">
+    Track Order UI
+  </div>
+)}
+{active === "account" && (
+  <div className="bg-white p-4 mt-6 rounded-2xl shadow-sm">
+    Account Details UI
+  </div>
+)}
           </div>
         </div>
       </div>

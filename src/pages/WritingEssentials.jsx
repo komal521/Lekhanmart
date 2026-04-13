@@ -17,7 +17,6 @@ import r7 from "../assets/r7.jpeg";
 import r8 from "../assets/r8.jpeg";
 import r9 from "../assets/r9.jpeg";
 import { useNavigate } from "react-router-dom";
-
 const WritingEssentials = () => {
   const [products] = useState([
     { id: 1, img: r1, name: "Midori MD Notebook-A5", price: "₹12,499" },
