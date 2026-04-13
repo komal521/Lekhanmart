@@ -41,8 +41,10 @@ import s4 from "../assets/s4.webp";
 import rahul from "../assets/rahul.jpg";
 import ananya from "../assets/ananaya.jpg";
 import vikram from "../assets/vikram.jpg";
+import p4 from "../assets/p4.webp";
 const Home = () => {
   const [activeBtn, setActiveBtn] = useState("shop");
+  const navigate = useNavigate();
   return (
    <div className="w-full overflow-x-hidden">
   <Navbar />
@@ -96,7 +98,6 @@ const Home = () => {
       <p className="text-gray-500 text-sm mt-1 mb-6">
           Curated collections for every Creative need.</p>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-
   <CategoryCard img={t1} title="OFFICE STATIONERY" />
   <CategoryCard img={t2} title="ART & CRAFT" />
   <CategoryCard img={t3} title="SCHOOL STATIONERY" />
@@ -111,8 +112,9 @@ const Home = () => {
   <CategoryCard img={t12} title="TAPE & SCISSORS" />
   <CategoryCard img={t13} title="Ink & Refills"/>
   <CategoryCard img={t14} title= "Clay & Dough"/>
-
-</div></div>
+  <CategoryCard img={p4} title="WRITING ESSENTIALS"
+  onClick={() => navigate("/writing-essentials")}/>
+    </div></div>
       <div className="px-4 md:px-10 py-12" style={{
           background: "linear-gradient(180deg, #FFFFFF 0%, #FFF49C 100%)", }} >
       <div className="flex justify-between items-center mb-6">
@@ -130,7 +132,6 @@ const Home = () => {
         {[1, 2, 3, 4, 5].map((_, i) => (
        <div key={i} onClick={() => alert(`Product ${i} clicked`)}
        className="bg-white p-3 rounded-lg shadow-sm hover:shadow-md hover:scale-105 transition cursor-pointer">
-
 <p className="text-gray-400 text-sm">Product {i + 1}</p> </div> ))}
         </div>
       </div>
@@ -254,9 +255,10 @@ function ReviewCard({ img, name, text }) {
       <img src={icon} className="w-8 h-8 object-contain" />
       <p className="text-sm font-semibold text-gray-700">
         {title} </p></div> );}
-    function CategoryCard({ img, title }) {
+   function CategoryCard({ img, title, onClick }) {
   return (
-    <div className="bg-white p-4 rounded-xl shadow-sm hover:shadow-md hover:scale-105 transition text-center cursor-pointer">
+    <div onClick={onClick}
+      className="bg-white p-4 rounded-xl shadow-sm hover:shadow-md hover:scale-105 transition text-center cursor-pointer" >
       <div className="flex justify-center items-center">
         <img src={img}
           className="w-36 h-36 object-cover rounded-full" />

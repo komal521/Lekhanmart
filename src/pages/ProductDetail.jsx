@@ -33,12 +33,11 @@
     const thumbnails = [r1, r2, r3, r4];
     const tabs = ["Description", "Specifications", "Reviews (124)", "Q&A"];
     const [activeBtn, setActiveBtn] = useState("cart");
-    
     return (
       <div className="bg-white min-h-screen w-full font-sans tracking-tight">
        <Navbar /> 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 py-4">
-  <div className="px-6 pt-4 flex items-center gap-2 text-sm text-gray-500">
+     <div className="px-6 pt-4 flex items-center gap-2 text-sm text-gray-500">
     <span onClick={() => navigate("/")}
       className="cursor-pointer hover:text-black transition" >
       Home

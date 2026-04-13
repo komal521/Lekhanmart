@@ -197,19 +197,15 @@ export default function Blog() {
           </div>
           {/* SIDEBAR */}
           <div className="space-y-6">
-           {/* SEARCH */}
         <div className="bg-white p-4 rounded-xl shadow-sm">
-         {/* TOP LABEL */}
        <div className="flex items-center gap-2 mb-2 font-medium">
       <img src={searchIcon} className="w-5 h-5 object-contain" />
       <span>Search Articles</span>
     </div>
-    {/* INPUT WITH ICON */}
     <div className="relative">
       <input
         className="w-full pl-10 pr-3 py-2 rounded border text-sm outline-none focus:ring-2 focus:ring-[#C2863FFF]"
         placeholder="Search articles..."/>
-      {/* ICON INSIDE INPUT */}
       <img src={searchIcon}
         className="w-4 h-4 absolute right-3 top-1/2 -translate-y-1/2 opacity-60" />
        </div>
@@ -234,9 +230,9 @@ export default function Blog() {
         className="text-xs bg-gray-100 px-2 py-2 rounded text-center hover:bg-[#C2863FFF] hover:text-white cursor-pointer">
         {c}
       </div>
-    ))}
-  </div>
-</div>
+         ))}
+         </div>
+             </div>
             {/* TRENDING */}
             <div className="bg-white p-4 rounded-xl shadow-sm">
               <div className="flex gap-2 mb-3 font-medium">
@@ -265,7 +261,6 @@ export default function Blog() {
   <input
     className="w-full px-3 py-2 rounded mb-3 text-sm border outline-none focus:ring-2 focus:ring-[#C2863FFF]"
     placeholder="Your email address"/>
-
   <button onClick={() => showToast("Subscribed Successfully!")}
     className="bg-[#C2863FFF] text-white px-4 py-2 rounded w-full hover:opacity-90 transition">
     Subscribe Now

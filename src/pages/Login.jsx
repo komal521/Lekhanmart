@@ -86,7 +86,6 @@ const Login = () => {
                  Apple
           </button>
         </div>
-    
       </div>
       <div className="text-center text-xs text-gray-500 mt-6 px-4 space-y-2">
         <p>Secure Checkout • SSL 256-bit • No Hidden Fees</p>

@@ -152,7 +152,7 @@ const Checkout = () => {
               className="w-full mt-3 py-3 rounded-md bg-[#FFF49C] font-semibold">
               Place Order
             </button>
-            {/* PROMO INPUT BOX */}
+            
         <div className="mt-4 border border-gray-200 rounded-lg flex items-center justify-between px-3 py-2 bg-[#fafafa]">
        <div className="flex items-center gap-2 w-full">
       <img src={addIcon} className="w-4 opacity-60" />
