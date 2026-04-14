@@ -6,7 +6,7 @@ import logo from "../assets/logo_golden_creation.avif";
 import { Link } from "react-router-dom";
 const Footer =()=>{
   return(
-    <footer className="w-full bg-white border-t mt-10">
+    <footer className="w-full bg-white border-t mt-10 relative z-10">
       <div className="max-w-7xl mx-auto px-5 py-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
         <div>
            <img src= {logo} alt="logo" className="w-40 mb-3"/>

@@ -17,6 +17,8 @@ import verifyIcon from "../assets/verify.png";
 import notificationIcon from "../assets/notification.png";
 import Orders from "../pages/Orders";
 import Address from "../pages/Address";
+import Wishlist from "../pages/Wishlist";
+import TrackOrder from "../pages/TrackOrder";
 const Profile = () => {
   const [active, setActive] = useState("dashboard");
   const [activeCard, setActiveCard] = useState("orders");
@@ -30,15 +32,15 @@ const Profile = () => {
   return (
     <>
       <Navbar />
-      <div className="w-full max-w-screen overflow-x-hidden bg-[#F4F4F4]">
+      <div className="w-full max-w-screen bg-[#F4F4F4]">
       <div className="w-full flex flex-col md:flex-row">
-      <div className="md:w-64 w-full bg-white px-0 md:p-5 shadow-sm flex md:flex-col justify-between md:h-screen overflow-x-auto md:overflow-visible flex-shrink-0">
+      <div className="md:w-64 w-full bg-white px-0 md:p-5 shadow-sm flex md:flex-col justify-between md:sticky md:top-16 h-auto md:h-[calc(100vh-64px)] overflow-x-auto md:overflow-visible overflow-y-hidden flex-shrink-0">
   {/* TOP MENU */}
-  <div className="flex md:flex-col gap-2 w-full">
+  <div className="flex flex-col md:flex-col w-full">
     <h2 className="text-lg font-semibold mb-6 hidden md:block">
       Dashboard
     </h2>
-    <div className="flex md:flex-col gap-1 md:space-y-2 text-sm w-full overflow-x-auto">
+    <div className="flex md:flex-col gap-2 md:space-y-2 text-sm w-full overflow-x-auto md:overflow-visible px-2 py-2">
       {[
         ["dashboard", "Dashboard", dashboardIcon],
         ["orders", "My Orders", ordersIcon],
@@ -49,8 +51,8 @@ const Profile = () => {
       ].map(([key, label, icon]) => (
         <div  key={key}
           onClick={() => setActive(key)}
-          className={`${menuClass(key)} min-w-[100px] md:min-w-full flex items-center justify-between`} >
-          <div className="flex items-center gap-2 md:gap-3">
+          className={`${menuClass(key)} min-w-[80px] md:min-w-full flex flex-col md:flex-row items-center justify-center md:justify-between`} >
+          <div className="flex flex-col md:flex-row items-center gap-1 md:gap-3">
             <img src={icon} className="w-4 h-4 md:w-5 md:h-5" />
             <span className="text-[11px] md:text-sm">{label}</span>
           </div>
@@ -58,20 +60,20 @@ const Profile = () => {
         </div>
       ))}
       <div onClick={() => handleClick("Logout")}
-        className="md:hidden flex items-center p-3 text-black font-medium min-w-[100px]"  >
+        className="md:hidden flex flex-col items-center p-2 text-black min-w-[70px]"  >
         <span className="text-[11px]">Log Out</span>
          </div>
         </div>
          </div>
-    <div className="hidden md:block w-full mb-20">
-    <div onClick={() => handleClick("Logout")}
-      className="flex items-center justify-center p-3 bg-yellow-100 rounded-xl cursor-pointer" >
-      <span className="text-sm font-medium">Log Out</span>
+         <div className="hidden md:flex flex-col justify-end h-full">
+      <div onClick={() => handleClick("Logout")}
+    className="flex items-center justify-center p-3 rounded-xl cursor-pointer bg-[#FFF49C] text-black font-semibold hover:bg-[#f7e98a]">
+    <span className="text-sm">Log Out</span>
       </div>
-       </div>
+       </div>  
          </div>       
           {/* MAIN */}
-          <div className="flex-1 w-full px-2 md:px-6 py-3 md:py-6 overflow-x-hidden">
+          <div className="flex-1 w-full px-3 md:px-6 py-3 md:py-6 overflow-y-auto h-[calc(100vh-64px)] overflow-x-hidden">
             <div className="w-full bg-white px-3 py-4 md:p-5 rounded-2xl shadow-sm flex flex-col md:flex-row justify-between items-start md:items-center gap-3 md:gap-4">
            <div className="flex items-center gap-3">
             <img src={profileImg} className="w-10 h-10 md:w-12 md:h-12 rounded-full" />
@@ -216,20 +218,19 @@ const Profile = () => {
        </div>
           )}
        {active === "wishlist" && (
-        <div className="bg-white p-4 mt-6 rounded-2xl shadow-sm">
-       Wishlist UI
+        <div className=" mt-6">
+          <Wishlist/>
          </div>
          )}
-{active === "track" && (
-  <div className="bg-white p-4 mt-6 rounded-2xl shadow-sm">
-    Track Order UI
-  </div>
-)}
-{active === "account" && (
+      {active === "track" && (
+      <div className="mt-6 ">
+        <TrackOrder />
+  </div>)}
+    {active === "account" && (
   <div className="bg-white p-4 mt-6 rounded-2xl shadow-sm">
     Account Details UI
-  </div>
-)}
+      </div>
+          )}
           </div>
         </div>
       </div>

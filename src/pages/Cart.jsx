@@ -43,7 +43,6 @@ const Cart = () => {
             <p className="text-sm text-gray-500 mb-5">
               You have 3 items in your cart
             </p>
-            {/* FREE SHIPPING */}
             <div className="bg-[#FFF4CC] p-4 rounded-lg mb-6">
               <div className="flex items-center justify-between text-sm font-medium">
                 <div className="flex items-center gap-2">
@@ -56,13 +55,11 @@ const Cart = () => {
                 <div className="bg-[#C2863F] h-2 w-[73%] rounded-full"></div>
               </div>
             </div>
-            {/* HEADER */}
             <div className="flex justify-between text-xs text-gray-400 mb-2">
               <span>PRODUCT DETAILS</span>
               <span>TOTAL</span>
             </div>
             <div className="border-b mb-4"></div>
-            {/* ITEMS */}
             {[
               {
                 cat: "WRITING ESSENTIALS",
@@ -145,7 +142,6 @@ const Cart = () => {
               </div>
             </div>
           </div>
-          {/* RIGHT */}
           <div className="bg-white border rounded-xl p-5 h-fit shadow-sm">
             <h3 className="font-semibold text-lg mb-4">Order Summary</h3>
             <p className="text-xs font-semibold text-black mb-2">
@@ -195,7 +191,6 @@ const Cart = () => {
               30-days Returns
               </div>   
             </div>
-            {/* HELP SECTION */}
 <div className="mt-6 border-t pt-4">
   <div className="flex items-center gap-2 text-sm text-gray-600">
     <img src={copyIcon} className="w-4" />
