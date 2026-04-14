@@ -9,6 +9,7 @@ import  Profile from "./pages/Profile";
 import Blog from "./pages/Blog";
 import Orders from "./pages/Orders";
 import Address from "./pages/Address";
+import About from "./pages/About";
 function App() {
   return (
     <BrowserRouter>
@@ -23,6 +24,7 @@ function App() {
         <Route path="/blog" element={<Blog />} />
         <Route path="/orders" element={<Orders />} />
         <Route path="/address" element={<Address />} />
+        <Route path="/about" element={<About />} />
       </Routes>
     </BrowserRouter>
   );

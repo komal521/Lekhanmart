@@ -39,8 +39,7 @@ const WritingEssentials = () => {
     setActiveIcon("clear");
     setTimeout(() => setActiveIcon(""), 200);};
   const handleLoadMore = () => {
-    alert("Load more clicked");
-  };
+    alert("Load more clicked");};
   const iconStyle = (name) =>
     `w-4 cursor-pointer transition transform ${
       activeIcon === name ? "scale-125 opacity-70" : "hover:scale-110"

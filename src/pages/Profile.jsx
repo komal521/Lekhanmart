@@ -7,7 +7,6 @@ import ordersIcon from "../assets/shopping-cart.png";
 import addressIcon from "../assets/location.png";
 import wishlistIcon from "../assets/heart.png";
 import trackIcon from "../assets/search.png";
-import accountIcon from "../assets/user.png";
 import chevron from "../assets/chevron.png";
 import starIcon from "../assets/star.png";
 import settingIcon from "../assets/settings.png";
@@ -35,8 +34,8 @@ const Profile = () => {
       <div className="w-full max-w-screen bg-[#F4F4F4]">
       <div className="w-full flex flex-col md:flex-row">
       <div className="md:w-64 w-full bg-white px-0 md:p-5 shadow-sm flex md:flex-col justify-between md:sticky md:top-16 h-auto md:h-[calc(100vh-64px)] overflow-x-auto md:overflow-visible overflow-y-hidden flex-shrink-0">
-  {/* TOP MENU */}
-  <div className="flex flex-col md:flex-col w-full">
+       {/* TOP MENU */}
+    <div className="flex flex-col md:flex-col w-full">
     <h2 className="text-lg font-semibold mb-6 hidden md:block">
       Dashboard
     </h2>
@@ -47,7 +46,6 @@ const Profile = () => {
         ["address", "Addresses", addressIcon],
         ["wishlist", "Wishlist", wishlistIcon],
         ["track", "Track Order", trackIcon],
-        ["account", "Account Details", accountIcon],
       ].map(([key, label, icon]) => (
         <div  key={key}
           onClick={() => setActive(key)}
@@ -83,7 +81,7 @@ const Profile = () => {
              </h1>
            <p className="text-[10px] md:text-sm text-gray-500">
                     Managing your office needs since March 2022
-          </p>
+             </p>
              </div>
               </div>
               <button onClick={() => handleClick("Edit Profile")}
@@ -226,11 +224,6 @@ const Profile = () => {
       <div className="mt-6 ">
         <TrackOrder />
   </div>)}
-    {active === "account" && (
-  <div className="bg-white p-4 mt-6 rounded-2xl shadow-sm">
-    Account Details UI
-      </div>
-          )}
           </div>
         </div>
       </div>

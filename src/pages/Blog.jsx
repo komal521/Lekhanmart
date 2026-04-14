@@ -183,7 +183,6 @@ export default function Blog() {
                 </div>
               </div>
             ))}
-            {/* LOAD MORE */}
             <div className="col-span-full flex flex-col items-center gap-2">
               <button onClick={() => showToast("Loading More Articles...")}
                 className="bg-[#C2863FFF] text-white px-6 py-2 rounded-full flex gap-2">
@@ -195,7 +194,6 @@ export default function Blog() {
               </p>
             </div>
           </div>
-          {/* SIDEBAR */}
           <div className="space-y-6">
         <div className="bg-white p-4 rounded-xl shadow-sm">
        <div className="flex items-center gap-2 mb-2 font-medium">
@@ -210,7 +208,6 @@ export default function Blog() {
         className="w-4 h-4 absolute right-3 top-1/2 -translate-y-1/2 opacity-60" />
        </div>
          </div>
-         {/* CATEGORY */}
       <div className="bg-white p-4 rounded-xl shadow-sm">
   <div className="flex items-center gap-2 mb-3 font-medium">
     <img src={sendIcon} className="w-4 h-4" />
