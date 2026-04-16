@@ -262,5 +262,4 @@ const WritingEssentials = () => {
     </>
   );
 };
-
 export default WritingEssentials;

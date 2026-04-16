@@ -82,7 +82,7 @@ export default function Blog() {
           <div className="bg-[#FFF49CFF] p-5 md:p-8 flex flex-col justify-center">
           <div className="flex justify-between mb-4">
           <span className="text-xs bg-[#404C31FF] text-white px-3 py-1 rounded-full">
-                  Featured Story
+            Featured Story
            </span>
            <div className="flex items-center gap-2 text-sm">
            <img src={clock} className="w-4" />

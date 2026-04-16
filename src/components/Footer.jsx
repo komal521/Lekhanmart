@@ -40,8 +40,13 @@ const Footer =()=>{
               </li>
               <li>
                 <Link to="/blog" className="hover:text-black cursor-pointer">Our Blog</Link></li>
-              <li className="hover:text-black cursor-pointer">Contact Us</li>
+              <li>
+                <Link to="/contact" className="hover:text-black cursor-pointer">
+                Contact Us </Link>
+              </li>
               <li className="hover:text-black cursor-pointer">FAQS</li>
+              <li>
+                <Link to ="/BundleKits" className="hover:text-black cursor-pointer">Bundle And kits</Link> </li>
             </ul>
           </div>
           <div>

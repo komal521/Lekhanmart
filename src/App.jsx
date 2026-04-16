@@ -10,6 +10,8 @@ import Blog from "./pages/Blog";
 import Orders from "./pages/Orders";
 import Address from "./pages/Address";
 import About from "./pages/About";
+import Contact from "./pages/Contact";
+import BundleKits from "./pages/BundleKits";
 function App() {
   return (
     <BrowserRouter>
@@ -25,6 +27,8 @@ function App() {
         <Route path="/orders" element={<Orders />} />
         <Route path="/address" element={<Address />} />
         <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/BundleKits" element={<BundleKits/>} />
       </Routes>
     </BrowserRouter>
   );

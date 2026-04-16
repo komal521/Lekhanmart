@@ -28,8 +28,8 @@ const Profile = () => {
       active === name
         ? "bg-[#FFF49C] text-black font-semibold"
         : "hover:bg-gray-100" }`;
-  return (
-    <>
+     return (
+      <>
       <Navbar />
       <div className="w-full max-w-screen bg-[#F4F4F4]">
       <div className="w-full flex flex-col md:flex-row">
@@ -77,10 +77,10 @@ const Profile = () => {
             <img src={profileImg} className="w-10 h-10 md:w-12 md:h-12 rounded-full" />
             <div>
              <h1 className="text-sm md:text-lg font-semibold">
-                    Welcome back, Aarav!
+              Welcome back, Aarav!
              </h1>
-           <p className="text-[10px] md:text-sm text-gray-500">
-                    Managing your office needs since March 2022
+              <p className="text-[10px] md:text-sm text-gray-500">
+                 Managing your office needs since March 2022
              </p>
              </div>
               </div>
@@ -99,7 +99,7 @@ const Profile = () => {
             ["address", "SAVED ADDRESSES", "02", "Primary: Home", addressIcon],
             ["points", "LEKHAN POINTS", "450", "Next reward at 500", starIcon],
             ].map(([key, title, val, para, icon], i) => (
-     <div key={i}
+         <div key={i}
           onClick={() => setActiveCard(key)}
             className={`p-3 md:p-4 rounded-2xl shadow-sm border cursor-pointer transition ${
             activeCard === key
@@ -119,7 +119,7 @@ const Profile = () => {
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-3 mb-4">
         <div>
         <h3 className="text-base md:text-lg font-semibold text-[#C2863F]">
-               Recent Orders
+         Recent Orders
         </h3>
         <p className="text-[10px] md:text-xs text-gray-400">
             You have placed 12 orders in the last 6 months.
@@ -127,7 +127,7 @@ const Profile = () => {
        </div>
         <button  onClick={() => handleClick("View Orders")}
           className="w-full md:w-auto px-4 py-2 border border-[#C2863F] text-[#C2863F] rounded-lg hover:bg-[#C2863F] hover:text-white text-xs md:text-sm" >
-                        View All Orders
+           View All Orders
          </button>
            </div>
            <div className="overflow-x-auto w-full">

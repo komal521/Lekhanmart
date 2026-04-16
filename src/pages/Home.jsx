@@ -47,7 +47,7 @@ const Home = () => {
   const navigate = useNavigate();
   return (
    <div className="w-full overflow-x-hidden">
-  <Navbar />
+  <Navbar/>
   <div className="bg-[#FFF49CFF] px-4 md:px-10 py-12 grid md:grid-cols-2">
   <div>
   <p className="text-sm bg-[#C2863FFF] text-white inline-block px-3 py-1 rounded-full mb-3">
@@ -76,10 +76,10 @@ const Home = () => {
        <img src={user2} className="w-8 h-8 rounded-full object-cover" />
       <img src={user3} className="w-8 h-8 rounded-full object-cover" />
         <p className="text-sm text-gray-600">
-              Trusted by 1000+ customers </p>
-          </div>   </div>
+         Trusted by 1000+ customers </p>
+          </div></div>
         <img src={heroImg}
-  className="w-full h-[260px] sm:h-[300px] md:h-[400px] object-cover rounded-lg mt-4 md:mt-0"/>
+    className="w-full h-[260px] sm:h-[300px] md:h-[400px] object-cover rounded-lg mt-4 md:mt-0"/>
       </div>
     <div className="grid grid-cols-2 md:grid-cols-4 gap-6 px-10 py-6 bg-white">
         <Feature icon={gift} title="Flat 15% off on first order" />
